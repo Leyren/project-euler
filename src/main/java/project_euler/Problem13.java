@@ -1,6 +1,6 @@
 package project_euler;
-import java.io.*;
-import java.util.*;
+
+import java.util.Scanner;
 
 /**
  * https://www.hackerrank.com/contests/projecteuler/challenges/euler013/problem

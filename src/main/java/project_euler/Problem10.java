@@ -1,15 +1,10 @@
 package project_euler;
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.TreeMap;
+import java.util.stream.IntStream;
 
 
 /**
@@ -48,7 +43,7 @@ public class Problem10 {
         TreeMap<Integer, Long> result = new TreeMap<>();
         result.put(1, 0L);
 
-        boolean[] primes = new boolean[limit+1];
+        boolean[] primes = new boolean[limit + 1];
         for (int i = 2; i < primes.length; i++) {
             primes[i] = true;
         }
@@ -58,8 +53,8 @@ public class Problem10 {
             if (primes[n]) {
                 result.put(n, result.get(last) + n);
                 last = n;
-                if ((long)n * n <= limit){
-                    for(int i = n*n; i <= limit; i += n){
+                if ((long) n * n <= limit) {
+                    for (int i = n * n; i <= limit; i += n) {
                         primes[i] = false;
                     }
                 }

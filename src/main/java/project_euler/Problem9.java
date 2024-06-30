@@ -1,15 +1,9 @@
 package project_euler;
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.stream.IntStream;
 
 
 /**
@@ -50,10 +44,10 @@ public class Problem9 {
             System.out.println("-1");
         } else {
             long max = -1;
-            for (int a = 1; a <= n / 3; a++){
-                int b = (n * n - 2 * n * a)/(2 * n - 2 * a);
+            for (int a = 1; a <= n / 3; a++) {
+                int b = (n * n - 2 * n * a) / (2 * n - 2 * a);
                 int c = n - a - b;
-                if (a*a + b*b == c*c) {
+                if (a * a + b * b == c * c) {
                     long r = (long) a * b * c;
                     max = Math.max(r, max);
                 }

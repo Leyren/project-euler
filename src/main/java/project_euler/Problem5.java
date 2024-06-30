@@ -1,8 +1,11 @@
 package project_euler;
-import java.io.*;
-import java.util.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.IntStream;
 
 /**
  * https://www.hackerrank.com/contests/projecteuler/challenges/euler005/problem
@@ -53,8 +56,8 @@ public class Problem5 {
 
     public static int pow(int a, int n) {
         if (n == 1) return a;
-        if (n % 2 == 0) return pow(a*a, n/2);
-        return a * pow(a, n-1);
+        if (n % 2 == 0) return pow(a * a, n / 2);
+        return a * pow(a, n - 1);
     }
 
     public static Map<Integer, Integer> primfactors(int n) {

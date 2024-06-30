@@ -1,20 +1,21 @@
 package project_euler;
 
-import java.io.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.stream.IntStream;
 
 
 public class Problem4 {
 
     /*
-    * Idea:
-    * With a number-range from 101'101 - 1'000'000 there are only ~900 possible palindromes
-    * Since we want to find the biggest palindrome, construct palindromes starting from the provided maximum
-    *
-    * e.g. N=987123
-    * start with 986689, and see if there are any divisors for it
-    * */
+     * Idea:
+     * With a number-range from 101'101 - 1'000'000 there are only ~900 possible palindromes
+     * Since we want to find the biggest palindrome, construct palindromes starting from the provided maximum
+     *
+     * e.g. N=987123
+     * start with 986689, and see if there are any divisors for it
+     * */
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
